@@ -10,11 +10,13 @@ import AboutSection from './pages/about/About';
 import GalleryScreen from './pages/gallery/Gallery';
 import ContactScreen from './pages/contact/Contact';
 import PremiumFooter from './components/Footer';
+import ScrollToTop from './components/ScrollToTop';
 
 export default function App() {
   return (
     <>
     <Navbar/>
+       <ScrollToTop />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<AboutSection />} />
