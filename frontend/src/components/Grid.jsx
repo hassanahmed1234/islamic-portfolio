@@ -51,7 +51,7 @@ export default function HomeImageGrid() {
   ];
 
   return (
-    <section id="media-grid" className="py-24 relative overflow-hidden bg-[#050A08]">
+    <section id="media-grid" className="py-14 relative overflow-hidden bg-[#050A08]">
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-600px h-600px bg-[#D4AF37]/3 rounded-full blur-[150px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
@@ -61,15 +61,13 @@ export default function HomeImageGrid() {
           <div className="space-y-3">
             <span className="text-xs font-bold tracking-[0.2em] text-[#D4AF37] uppercase block">Captured Moments</span>
             <h2 className="text-3xl sm:text-5xl font-semibold text-white tracking-tight">
-              Visual Chronicles
+              Highlights
             </h2>
             <p className="text-gray-400 text-sm max-w-md leading-relaxed">
               Seminars, tech codebases, and digital dawah production frames captured across my professional journey.
             </p>
           </div>
-          <div className="text-xs font-semibold text-[#D4AF37] tracking-wider uppercase border-b border-[#D4AF37]/30 pb-1 cursor-pointer hover:border-[#D4AF37] transition-all">
-            Scroll to Explore
-          </div>
+          
         </div>
 
         {/* Dynamic Mosaic Image Grid Framework */}

@@ -108,12 +108,12 @@ export default function HomePage() {
 
             {/* 3. ABOUT HIGHLIGHT */}
             <section id="about" className="py-20 bg-[#080E0C] border-y border-[#14231B]">
-                <div className="max-w-5xl mx-auto px-6 text-center space-y-8">
+                <div className="max-w-5xl mx-auto px-6 text-center space-y-5">
                     <p className="text-xs font-bold tracking-[0.25em] text-[#D4AF37] uppercase">My Mission</p>
                     <h2 className="text-2xl sm:text-4xl font-serif font-light text-white leading-relaxed">
                         Delivering profound spiritual truths with clarity, inspiring minds to understand Islam rationally, and shaping character with modern tools.
                     </h2>
-                    <div className="w-20 h-1px bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent mx-auto" />
+                    <div style={textGoldGradientStyle} className="w-20 h-1px  mx-auto" />
                     <p className="text-gray-400 max-w-2xl mx-auto text-sm sm:text-base leading-relaxed">
                         Based in Karachi, Pakistan, I dedicate my life to making sacred Islamic knowledge accessible and relevant to our young, tech-savvy generation. Through interactive lectures, customized educational curricula, and high-impact digital media, I bridge the gap between tradition and modernity.
                     </p>
