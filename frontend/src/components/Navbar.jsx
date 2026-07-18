@@ -25,14 +25,16 @@ const Navbar = () => {
                 <div className="flex items-center gap-3 group cursor-pointer">
                     {/* Logo Image Master Container - Width increased for premium visibility */}
                     <div className="w-28 sm:w-36 h-14 sm:h-16 flex items-center justify-start overflow-hidden">
-                        <img
-                            src={LOGO}
-                            alt="HAQ Branding Logo"
-                            className="w-full h-full object-contain filter drop-shadow-[0_2px_10px_rgba(0,0,0,0.6)] group-hover:scale-102 transition-transform duration-500 ease-out"
-                            onError={(e) => {
-                                e.target.style.display = "none";
-                            }}
-                        />
+                        <Link  to="/">
+                            <img
+                                src={LOGO}
+                                alt="HAQ Branding Logo"
+                                className="w-full h-full object-contain filter drop-shadow-[0_2px_10px_rgba(0,0,0,0.6)] group-hover:scale-102 transition-transform duration-500 ease-out"
+                                onError={(e) => {
+                                    e.target.style.display = "none";
+                                }}
+                            />
+                        </Link>
                     </div>
                 </div>
 

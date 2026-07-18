@@ -41,7 +41,7 @@ export default function HomePage() {
                                 Welcome to the Official Platform
                             </div>
 
-                            <h1 className="text-4xl sm:text-5xl lg:text-7xl font-light tracking-tight text-white leading-tight">
+                            <h1 style={textGoldGradientStyle} className="text-4xl sm:text-5xl lg:text-7xl font-light tracking-tight text-white leading-tight">
                                 Hafiz Hassan <br />
                                 <span style={textGoldGradientStyle} className="font-bold">
                                     Ahmed Qadri
@@ -75,7 +75,7 @@ export default function HomePage() {
                         <div className="lg:col-span-5 flex justify-center">
                             <div className="relative group">
                                 {/* Glowing outline effect */}
-                                <div className="absolute -inset-1 bg-gradient-to-r from-[#D4AF37] to-[#1C2C24] rounded-2xl blur opacity-30 group-hover:opacity-40 transition duration-1000"></div>
+                                <div style={textGoldGradientStyle} className="absolute -inset-1 rounded-2xl blur opacity-30 group-hover:opacity-40 transition duration-1000"></div>
 
                                 <div className="relative w-280px h-380px sm:w-340px sm:h-460px bg-[#111D17] border border-[#2B4638] rounded-2xl overflow-hidden flex flex-col justify-between p-8">
                                     {/* Top Islamic Geometric Frame */}
