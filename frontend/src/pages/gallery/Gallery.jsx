@@ -161,6 +161,7 @@ export default function GalleryScreen({ goldGradientStyle }) {
       tags: ["Ramadan", "Daily Reminder", "Digital Da'wah"]
     }
   ];
+  
 
   // Filtering Logic
   const filteredItems = activeFilter === 'all'
@@ -181,7 +182,7 @@ export default function GalleryScreen({ goldGradientStyle }) {
             <span className="w-1.5 h-1.5 rounded-full bg-[#D4AF37] animate-pulse"></span>
             <span className="text-[10px] font-bold tracking-[0.25em] text-[#D4AF37] uppercase">Portfolio</span>
           </div>
-          <h1 className="text-4xl sm:text-6xl font-medium text-white tracking-tight font-serif">
+          <h1 className="text-4xl sm:text-6xl font-medium  tracking-tight font-serif">
             Moments, Modules & Milestones
           </h1>
           <p className="text-gray-400 text-sm sm:text-base max-w-xl mx-auto leading-relaxed font-light">
