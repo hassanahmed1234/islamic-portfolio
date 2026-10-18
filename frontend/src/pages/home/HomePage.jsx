@@ -49,7 +49,7 @@ const PROJECTS = [
         summary: 'Point of sale and back-office tools for restaurants: orders, tables, kitchen flow and daily sales.',
         features: ['Table & order tracking', 'Kitchen display screen', 'Inventory & sales reports'],
         stack: ['React', 'Node.js', 'MongoDB'],
-        live: 'https://my-academy-y59r.vercel.app/',
+        live: 'https://your-restuarant.netlify.app/',
         code: '#',
     },
     {
