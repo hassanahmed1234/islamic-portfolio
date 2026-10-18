@@ -13,7 +13,6 @@ export default function GalleryScreen({ goldGradientStyle }) {
   const [selectedItem, setSelectedItem] = useState(null);
 
   // 2. DYNAMIC PORTFOLIO DATA HUB
-  // Aap yahan apni pictures ke paths aur paragraphs asani se customize kar sakte hain
   const galleryItems = [
     {
       id: 1,
@@ -25,13 +24,8 @@ export default function GalleryScreen({ goldGradientStyle }) {
       metaLabel: "Lecture / Event",
       location: "Main Auditorium, Karachi",
       audience: "1,500+ University Students",
-
-      // 1. AAPKI PICTURE KA PATH (Replace this link with your local asset or URL)
       imgUrl: seminarPic,
-
-      // 2. AAPKA CUSTOM PARAGRAPH FOR THIS PICTURE
       longParagraph: "Is specific seminar me maine pure online youth community se direct communication ki. Aaj ke hyper-connected era me smartphone addiction aur digital distraction se kaise bacha jaye aur deen par kaise isteqamat ikhtiyar ki jaye, is par ek comprehensive framework share kiya. Audience ka response bohot overwhelming tha aur event ke baad kafi lambi Q&A evaluation chalti rahi.",
-
       deliverables: ["2-Hour Keynote Session", "Interactive Q&A Session Block", "Youth Mentorship Action Roadmap"],
       tags: ["Tazkiyah", "Youth Empowerment", "Contemporary Fiqh"]
     },
@@ -45,18 +39,9 @@ export default function GalleryScreen({ goldGradientStyle }) {
       metaLabel: "Islamic Lecture",
       location: "Central Mosque, Karachi",
       audience: "800+ Worshippers",
-
       imgUrl: hero4,
-
-      longParagraph:
-        "This Friday sermon focused on strengthening faith, developing righteous character, and encouraging Muslims to implement the teachings of the Qur'an and Sunnah in their daily lives. The session concluded with an interactive discussion addressing contemporary challenges faced by the Muslim community.",
-
-      deliverables: [
-        "Friday Khutbah",
-        "Community Q&A",
-        "Practical Islamic Guidance"
-      ],
-
+      longParagraph: "This Friday sermon focused on strengthening faith, developing righteous character, and encouraging Muslims to implement the teachings of the Qur'an and Sunnah in their daily lives. The session concluded with an interactive discussion addressing contemporary challenges faced by the Muslim community.",
+      deliverables: ["Friday Khutbah", "Community Q&A", "Practical Islamic Guidance"],
       tags: ["Khutbah", "Qur'an & Sunnah", "Community"]
     },
     {
@@ -69,18 +54,9 @@ export default function GalleryScreen({ goldGradientStyle }) {
       metaLabel: "Media Production",
       location: "Online Platforms",
       audience: "Thousands of Online Viewers",
-
       imgUrl: online,
-
-      longParagraph:
-        "A series of short Islamic reminder videos created to inspire people through authentic teachings of Islam. Each episode focuses on practical lessons from the Qur'an and Sunnah, encouraging self-reflection, sincerity, and positive character development.",
-
-      deliverables: [
-        "Weekly Reminder Videos",
-        "Short Educational Clips",
-        "Islamic Social Media Content"
-      ],
-
+      longParagraph: "A series of short Islamic reminder videos created to inspire people through authentic teachings of Islam. Each episode focuses on practical lessons from the Qur'an and Sunnah, encouraging self-reflection, sincerity, and positive character development.",
+      deliverables: ["Weekly Reminder Videos", "Short Educational Clips", "Islamic Social Media Content"],
       tags: ["Digital Da'wah", "Islamic Media", "Reminder"]
     },
     {
@@ -93,23 +69,10 @@ export default function GalleryScreen({ goldGradientStyle }) {
       metaLabel: "Islamic Conference",
       location: "Karachi, Pakistan",
       audience: "2,500+ Attendees",
-
       imgUrl: award,
-
-      longParagraph:
-        "This conference explored the timeless lessons from the blessed Seerah of Prophet Muhammad ﷺ and their relevance to modern life. The session emphasized sincere faith, noble character, compassion, leadership, and practical guidance inspired by the Qur'an and Sunnah. Attendees were encouraged to strengthen their relationship with Allah and adopt the Prophetic model in their personal, family, and social lives.",
-
-      deliverables: [
-        "Keynote Lecture",
-        "Interactive Q&A Session",
-        "Seerah Study Notes"
-      ],
-
-      tags: [
-        "Seerah",
-        "Prophetic Guidance",
-        "Islamic Conference"
-      ]
+      longParagraph: "This conference explored the timeless lessons from the blessed Seerah of Prophet Muhammad ﷺ and their relevance to modern life. The session emphasized sincere faith, noble character, compassion, leadership, and practical guidance inspired by the Qur'an and Sunnah. Attendees were encouraged to strengthen their relationship with Allah and adopt the Prophetic model in their personal, family, and social lives.",
+      deliverables: ["Keynote Lecture", "Interactive Q&A Session", "Seerah Study Notes"],
+      tags: ["Seerah", "Prophetic Guidance", "Islamic Conference"]
     },
     {
       id: 5,
@@ -121,21 +84,11 @@ export default function GalleryScreen({ goldGradientStyle }) {
       metaLabel: "Islamic Education",
       location: "Community Learning Center",
       audience: "Students & Young Professionals",
-
       imgUrl: hero1,
-
-      longParagraph:
-        "This educational workshop emphasized the importance of seeking authentic Islamic knowledge alongside developing noble character. Participants explored practical ways to strengthen their relationship with Allah while applying Islamic principles in everyday life.",
-
-      deliverables: [
-        "Interactive Learning Sessions",
-        "Question & Answer Forum",
-        "Educational Notes"
-      ],
-
+      longParagraph: "This educational workshop emphasized the importance of seeking authentic Islamic knowledge alongside developing noble character. Participants explored practical ways to strengthen their relationship with Allah while applying Islamic principles in everyday life.",
+      deliverables: ["Interactive Learning Sessions", "Question & Answer Forum", "Educational Notes"],
       tags: ["Islamic Education", "Character Building", "Youth"]
     },
-
     {
       id: 6,
       category: "media",
@@ -146,22 +99,12 @@ export default function GalleryScreen({ goldGradientStyle }) {
       metaLabel: "Ramadan Series",
       location: "Digital Platforms",
       audience: "Global Online Audience",
-
       imgUrl: stage,
-
-      longParagraph:
-        "A daily Ramadan reminder series designed to inspire hearts with authentic Islamic teachings. Each episode highlighted the virtues of fasting, sincere worship, patience, gratitude, and self-purification while encouraging viewers to make the most of the blessed month.",
-
-      deliverables: [
-        "30 Daily Ramadan Episodes",
-        "Short Inspirational Reels",
-        "Qur'an & Hadith Reflections"
-      ],
-
+      longParagraph: "A daily Ramadan reminder series designed to inspire hearts with authentic Islamic teachings. Each episode highlighted the virtues of fasting, sincere worship, patience, gratitude, and self-purification while encouraging viewers to make the most of the blessed month.",
+      deliverables: ["30 Daily Ramadan Episodes", "Short Inspirational Reels", "Qur'an & Hadith Reflections"],
       tags: ["Ramadan", "Daily Reminder", "Digital Da'wah"]
     }
   ];
-  
 
   // Filtering Logic
   const filteredItems = activeFilter === 'all'
@@ -171,13 +114,13 @@ export default function GalleryScreen({ goldGradientStyle }) {
   return (
     <section className="min-h-screen bg-[#050A08] py-28 relative overflow-hidden antialiased selection:bg-[#D4AF37] selection:text-black">
       {/* Background Ambience */}
-      <div className="absolute top-0 right-1/4 w-600px h-600px bg-[#D4AF37]/[0.03] rounded-full blur-[160px] pointer-events-none" />
-      <div className="absolute bottom-10 left-1/4 w-600px h-600px bg-[#14291D]/40 rounded-full blur-[160px] pointer-events-none" />
+      <div className="absolute top-0 right-1/4 w-[600px] h-[600px] bg-[#D4AF37]/[0.03] rounded-full blur-[160px] pointer-events-none" />
+      <div className="absolute bottom-10 left-1/4 w-[600px] h-[600px] bg-[#14291D]/40 rounded-full blur-[160px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
 
-        {/* Header Block */}
-        <div className="text-center max-w-3xl mx-auto mb-20 space-y-4">
+        {/* Header Block with AOS */}
+        <div data-aos="fade-up" data-aos-duration="1000" className="text-center max-w-3xl mx-auto mb-20 space-y-4">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#111D17] border border-[#1C2D23]">
             <span className="w-1.5 h-1.5 rounded-full bg-[#D4AF37] animate-pulse"></span>
             <span className="text-[10px] font-bold tracking-[0.25em] text-[#D4AF37] uppercase">Portfolio</span>
@@ -186,11 +129,12 @@ export default function GalleryScreen({ goldGradientStyle }) {
             Moments, Modules & Milestones
           </h1>
           <p className="text-gray-400 text-sm sm:text-base max-w-xl mx-auto leading-relaxed font-light">
-            A collection of inspiring lectures, Islamic education, and meaningful digital Da'wah dedicated to serving the Ummah.          </p>
+            A collection of inspiring lectures, Islamic education, and meaningful digital Da'wah dedicated to serving the Ummah.
+          </p>
         </div>
 
-        {/* Filter Navigation Tabs */}
-        <div className="flex flex-wrap justify-center items-center gap-3 mb-16">
+        {/* Filter Navigation Tabs with AOS */}
+        <div data-aos="fade-up" data-aos-delay="200" className="flex flex-wrap justify-center items-center gap-3 mb-16">
           {[
             { id: 'all', label: 'All Projects', icon: <Layout size={13} /> },
             { id: 'events', label: 'Seminars & Events', icon: <Calendar size={13} /> },
@@ -211,24 +155,25 @@ export default function GalleryScreen({ goldGradientStyle }) {
           ))}
         </div>
 
-        {/* Dynamic Gallery Bento Grid */}
+        {/* Dynamic Gallery Bento Grid with Staggered AOS */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredItems.map((item) => (
+          {filteredItems.map((item, index) => (
             <div
               key={item.id}
+              data-aos="fade-up"
+              data-aos-delay={(index % 3) * 150}
+              data-aos-duration="800"
               onClick={() => setSelectedItem(item)}
               className="group bg-[#111D17]/40 border border-[#1C2D23] rounded-2xl overflow-hidden hover:border-[#D4AF37]/30 shadow-lg hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.7)] transition-all duration-500 relative flex flex-col cursor-pointer hover:-translate-y-1 backdrop-blur-md"
             >
               {/* REAL IMAGE RENDER CANVAS WINDOW */}
               <div className="w-full aspect-[4/3] bg-[#0A0F0D] border-b border-[#1C2D23]/60 relative overflow-hidden flex items-center justify-center">
 
-                {/* Image element with smart hover pan animation */}
                 <img
                   src={item.imgUrl}
                   alt={item.title}
                   className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                   onError={(e) => {
-                    // Fallback visual placeholder if an image url fails to resolve or load
                     e.target.style.display = 'none';
                   }}
                 />
@@ -278,7 +223,7 @@ export default function GalleryScreen({ goldGradientStyle }) {
 
         {/* Empty Result Fallback */}
         {filteredItems.length === 0 && (
-          <div className="text-center py-20 bg-[#111D17]/40 border border-[#1C2D23] rounded-3xl max-w-md mx-auto space-y-3 backdrop-blur-sm">
+          <div data-aos="zoom-in" className="text-center py-20 bg-[#111D17]/40 border border-[#1C2D23] rounded-3xl max-w-md mx-auto space-y-3 backdrop-blur-sm">
             <ShieldCheck size={32} className="mx-auto text-gray-600" />
             <p className="text-white font-medium tracking-wide">No Items Currently Active</p>
           </div>
@@ -345,7 +290,7 @@ export default function GalleryScreen({ goldGradientStyle }) {
                   </div>
                 </div>
 
-                {/* THE CUSTOM PARAGRAPH COMPONENT - RENDERS THE UNIQUE PARAGRAPH */}
+                {/* THE CUSTOM PARAGRAPH COMPONENT */}
                 <div className="space-y-2 text-left border-t border-[#1C2C24]/40 pt-4">
                   <span className="text-[#D4AF37] uppercase tracking-widest text-[10px] font-bold block">Detailed Record / Paragraph</span>
                   <p className="text-sm text-gray-300 leading-relaxed font-light">

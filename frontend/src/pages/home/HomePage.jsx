@@ -8,6 +8,10 @@ import 'aos/dist/aos.css';
 import { Link } from 'react-router-dom';
 import profileImg from '../../assets/hero1.jpeg';
 import HomeImageGrid from '../../components/Grid';
+import restaurantImg from '../../assets/restaurant.png';
+import academyImg from '../../assets/academy.png';
+import hidayatImg from '../../assets/hidayat.jpg';
+import hospitalImg from '../../assets/hospital.png';
 
 /* ------------------------------------------------------------------ */
 /*  DESIGN TOKENS                                                      */
@@ -27,45 +31,44 @@ const goldText = {
 /* ------------------------------------------------------------------ */
 const PROJECTS = [
     {
-        title: 'School Management System',
+        title: 'Hospital Management System',
         kind: 'dashboard',
+        image: hospitalImg, // Yahan import ki gayi variable pass karein
         categories: ['Web', 'SaaS'],
-        summary:
-            'A multi-tenant platform where each school gets its own workspace for students, staff, fees and results.',
+        summary: 'A multi-tenant platform where each school gets its own workspace for students, staff, fees and results.',
         features: ['Attendance & timetables', 'Fee collection & receipts', 'Result cards & parent portal'],
         stack: ['React', 'Node.js', 'Express', 'MongoDB', 'Tailwind'],
-        live: '#',
+        live: 'https://smart-hospital-managment-bud6.vercel.app',
         code: '#',
     },
     {
         title: 'Restaurant Management',
         kind: 'menu',
+        image: restaurantImg,
         categories: ['Web', 'SaaS'],
-        summary:
-            'Point of sale and back-office tools for restaurants: orders, tables, kitchen flow and daily sales.',
+        summary: 'Point of sale and back-office tools for restaurants: orders, tables, kitchen flow and daily sales.',
         features: ['Table & order tracking', 'Kitchen display screen', 'Inventory & sales reports'],
         stack: ['React', 'Node.js', 'MongoDB'],
-        live: '#',
+        live: 'https://my-academy-y59r.vercel.app/',
         code: '#',
     },
     {
         title: 'Islamic Online Academy',
         kind: 'course',
+        image: academyImg,
         categories: ['Web'],
-        summary:
-            'An online academy for Quran, Tajweed and Islamic studies, with courses, live classes and student progress.',
+        summary: 'An online academy for Quran, Tajweed and Islamic studies, with courses, live classes and student progress.',
         features: ['Course & class scheduling', 'Student progress tracking', 'Teacher and admin dashboards'],
         stack: ['React', 'Node.js', 'MongoDB', 'Tailwind'],
-        live: '#',
+        live: 'https://my-academy-y59r.vercel.app/',
         code: '#',
     },
-
     {
         title: 'Hidayat App',
         kind: 'mobile-app',
+        image: hidayatImg,
         categories: ['React Native', 'Islamic'],
-        summary:
-            'An Islamic mobile application providing Quran, prayer times, Qibla direction, digital Tasbeeh, authentic Duas, Hadith, Islamic quizzes and educational content for children.',
+        summary: 'An Islamic mobile application providing Quran, prayer times, Qibla direction, digital Tasbeeh, authentic Duas, Hadith, Islamic quizzes and educational content for children.',
         features: [
             'Quran with Surah and Juz navigation',
             'Prayer times and Qibla direction',
@@ -78,8 +81,6 @@ const PROJECTS = [
         live: '#',
         code: '#',
     },
-
-
 ];
 
 const FILTERS = ['All', 'Web', 'SaaS', 'Mobile'];
@@ -208,15 +209,31 @@ function ProjectCard({ project, index, featured }) {
         <article
             data-aos="fade-up"
             data-aos-delay={(index % 3) * 100}
-            className={`group rounded-3xl bg-[#111D17] border border-[#1C2D23] overflow-hidden flex flex-col hover:border-[#D4AF37]/40 transition-colors duration-300 ${featured ? 'lg:col-span-2 lg:flex-row' : ''
+            className={`group rounded-3xl bg-[#111D17] border border-[#1C2D23] overflow-hidden flex flex-col hover:border-[#D4AF37]/40 transition-all duration-500 ${featured ? 'lg:col-span-2 lg:flex-row' : ''
                 }`}
         >
-            <div className={`${featured ? 'lg:w-1/2' : ''} h-56 sm:h-64 bg-[#0D1712] ${featured ? 'lg:h-auto lg:min-h-[320px]' : ''} border-b lg:border-b-0 border-[#1C2D23] ${featured ? 'lg:border-r' : ''}`}>
-                <Mock kind={project.kind} />
+            {/* Project Image Container */}
+            <div
+                className={`${featured ? 'lg:w-1/2' : ''} h-60 sm:h-72 bg-[#0D1712] ${featured ? 'lg:h-auto lg:min-h-[360px]' : ''
+                    } border-b lg:border-b-0 border-[#1C2D23] ${featured ? 'lg:border-r' : ''
+                    } overflow-hidden relative`}
+            >
+                {project.image ? (
+                    <img
+                        src={project.image}
+                        alt={project.title}
+                        className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500 ease-out"
+                    />
+                ) : (
+                    <Mock kind={project.kind} />
+                )}
+                {/* Subtle overlay gradient on hover */}
+                <div className="absolute inset-0 bg-gradient-to-t from-[#111D17]/80 via-transparent to-transparent opacity-60 group-hover:opacity-30 transition-opacity duration-300" />
             </div>
 
+            {/* Details Section */}
             <div className={`p-7 sm:p-8 flex flex-col ${featured ? 'lg:w-1/2 justify-center' : 'flex-1'}`}>
-                <div className="flex gap-2 mb-4">
+                <div className="flex flex-wrap gap-2 mb-4">
                     {project.categories.map((c) => (
                         <span key={c} className="text-xs font-semibold text-[#D4AF37] bg-[#14261C] border border-[#234030] px-2.5 py-1 rounded-full">
                             {c}
@@ -240,15 +257,33 @@ function ProjectCard({ project, index, featured }) {
 
                 <div className="flex flex-wrap gap-2 mb-6">
                     {project.stack.map((s) => (
-                        <span key={s} className="text-xs text-gray-400 border border-[#234030] rounded-md px-2 py-1">
+                        <span key={s} className="text-xs text-gray-400 border border-[#234030] bg-[#0E1712] rounded-md px-2.5 py-1">
                             {s}
                         </span>
                     ))}
                 </div>
 
-                <div className="mt-auto flex items-center gap-5 text-sm font-semibold">
-
-
+                <div className="mt-auto flex items-center gap-5 text-sm font-semibold pt-2 border-t border-[#1C2D23]">
+                    {project.live && project.live !== '#' && (
+                        <a
+                            href={project.live}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-[#D4AF37] hover:underline flex items-center gap-1.5"
+                        >
+                            Live Demo <ExternalLink size={14} />
+                        </a>
+                    )}
+                    {project.code && project.code !== '#' && (
+                        <a
+                            href={project.code}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-gray-400 hover:text-white flex items-center gap-1.5 transition-colors"
+                        >
+                            Source Code <Github size={14} />
+                        </a>
+                    )}
                 </div>
             </div>
         </article>

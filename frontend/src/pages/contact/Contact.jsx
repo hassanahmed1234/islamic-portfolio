@@ -10,15 +10,18 @@ export default function ContactScreen({ goldGradientStyle }) {
     return (
         <main className="min-h-screen bg-[#050A08] pt-32 pb-24 relative overflow-hidden flex items-center">
             {/* Structural Glass Radial Backdrops */}
-            <div className="absolute top-1/3 left-1/4 w-600px h-600px bg-[#D4AF37]/3 rounded-full blur-[180px] pointer-events-none" />
-            <div className="absolute bottom-0 right-10 w-500px h-500px bg-[#111D17]/60 rounded-full blur-[160px] pointer-events-none" />
+            <div className="absolute top-1/3 left-1/4 w-[600px] h-[600px] bg-[#D4AF37]/3 rounded-full blur-[180px] pointer-events-none" />
+            <div className="absolute bottom-0 right-10 w-[500px] h-[500px] bg-[#111D17]/60 rounded-full blur-[160px] pointer-events-none" />
 
             <div className="max-w-7xl mx-auto px-6 relative z-10 w-full">
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-stretch">
 
-                    {/* LEFT AREA: Integrated Corporate Identity (5 Columns) */}
-                    <div className="lg:col-span-5 bg-[#111D17]/30 border border-[#1C2D23] rounded-3xl p-8 sm:p-10 flex flex-col justify-between space-y-12 backdrop-blur-md">
-
+                    {/* LEFT AREA: Integrated Corporate Identity (5 Columns) with AOS */}
+                    <div 
+                        data-aos="fade-right" 
+                        data-aos-duration="1000"
+                        className="lg:col-span-5 bg-[#111D17]/30 border border-[#1C2D23] rounded-3xl p-8 sm:p-10 flex flex-col justify-between space-y-12 backdrop-blur-md"
+                    >
                         <div className="space-y-6">
                             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#14261C] border border-[#2D4A39]/60">
                                 <span className="w-1.5 h-1.5 rounded-full bg-[#D4AF37] animate-pulse" />
@@ -57,8 +60,12 @@ export default function ContactScreen({ goldGradientStyle }) {
 
                     </div>
 
-                    {/* RIGHT AREA: Geometric Bento Block Modules (7 Columns) */}
-                    <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-5">
+                    {/* RIGHT AREA: Geometric Bento Block Modules (7 Columns) with AOS */}
+                    <div 
+                        data-aos="fade-left" 
+                        data-aos-duration="1000"
+                        className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-5"
+                    >
 
                         {/* Box 1: Islamic Seminars Keynote Block */}
                         <a
@@ -78,7 +85,7 @@ export default function ContactScreen({ goldGradientStyle }) {
                             <div className="space-y-2 z-10 text-left">
                                 <h3 className="text-lg font-bold text-white tracking-wide">Islamic Lectures & Keynotes</h3>
                                 <p className="text-xs text-gray-400 leading-relaxed max-w-xl">
-                                    Choose the purpose of your inquiry below. Whether you're inviting me for a lecture, planning an event, or seeking collaboration, each option opens a pre-filled WhatsApp message for a smooth and convenient conversation.                               </p>
+                                    Choose the purpose of your inquiry below. Whether you're inviting me for a lecture, planning an event, or seeking collaboration, each option opens a pre-filled WhatsApp message for a smooth and convenient conversation.                                </p>
                             </div>
                         </a>
 
